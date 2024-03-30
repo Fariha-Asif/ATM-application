@@ -15,7 +15,7 @@ let pinAnswer = await inquirer.prompt([
   },
   { name: "pin", 
   type: "number", 
-  message: "Enter your pin number?" },
+  message: `Enter your pin number? ${myPinCode}` },
 ]);
 
 if (pinAnswer.pin == myPinCode) {
@@ -30,6 +30,7 @@ if (pinAnswer.pin == myPinCode) {
       "Balance Inquiry",
       "Deposit Amount",
       "Transfer Money",
+      "Exit"
     ],
   });
   if (operationAns.operation == "withdraw cash") {
@@ -87,6 +88,8 @@ if (pinAnswer.pin == myPinCode) {
         `Your amount has been transfered successfully and your new Balance is ${myBalance}`
       );
     }
+  } else if (operationAns.operation == "Exit"){
+    console.log("Thank you for using ATM. \n ALLAH HAFIZ")
   }
 } else {
   console.log("Invalid Pin Code.");

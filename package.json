@@ -1,6 +1,6 @@
 {
   "name": "fari-cli-atm-application",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": " A Simple ATM application using Typescript, NodeJS and inquirer.",
   "main": "index.js",
   "type": "module",

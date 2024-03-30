@@ -1,0 +1,23 @@
+{
+  "name": "fari-cli-atm-application",
+  "version": "1.0.0",
+  "description": " A Simple ATM application using Typescript, NodeJS and inquirer.",
+  "main": "index.js",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Fariha Asif",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^9.2.16"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7"
+  }
+}

@@ -5,11 +5,18 @@ import inquirer from "inquirer";
 let myBalance = 20000; //Dollar
 let myPinCode = 1234;
 
-let pinAnswer = await inquirer.prompt({
-  name: "pin",
-  type: "number",
-  message: "Enter your pin number?",
-});
+console.log("Welcome to the ATM Made By Fariha Asif");
+
+let pinAnswer = await inquirer.prompt([
+  {
+    name: "name",
+    type: "string",
+    message: "Enter your name?",
+  },
+  { name: "pin", 
+  type: "number", 
+  message: "Enter your pin number?" },
+]);
 
 if (pinAnswer.pin == myPinCode) {
   console.log("Correct Pin Code");
@@ -44,7 +51,9 @@ if (pinAnswer.pin == myPinCode) {
       message: "Select one amount",
       choices: ["2000", "5000", "10000", "15000", "20000"],
     });
-    if (selectAmount.select == "2000") {
+    if (selectAmount.select > myBalance) {
+      console.log("Sorry you have insufficient Balance.");
+    } else if (selectAmount.select == "2000") {
       console.log(`Your new balance is ${(myBalance -= 2000)}`);
     } else if (selectAmount.select == "5000") {
       console.log(`Your new balance is ${(myBalance -= 5000)}`);
